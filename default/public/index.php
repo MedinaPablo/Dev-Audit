@@ -41,6 +41,11 @@ const APP_CHARSET = 'UTF-8';
  */
 const PRODUCTION = false;
 
+/**
+ * Define marca de tiempo en que inicio el Request
+ */
+define('START_TIME', microtime(1));
+
 /*
  * Descomentar para mostrar los errores
  */
@@ -86,6 +91,8 @@ define('PUBLIC_PATH', substr($_SERVER['SCRIPT_NAME'], 0, -9)); // - index.php st
  * 'https://www.midominio.com/'  usando dominio.
  */
 //const PUBLIC_PATH = '/';
+
+define('SIN_MOD_REWRITE', TRUE);
 
 /**
  * Obtiene la url usando PATH_INFO.
